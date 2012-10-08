@@ -14,6 +14,12 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
+  
+  x,y,z = [a,b,c].sort
+  if x + y <= z
+    raise TriangleError
+  end
+  
   ab = a == b
   bc = b == c
   if ab && bc
